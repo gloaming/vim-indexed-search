@@ -95,6 +95,10 @@ endfunction
 
 
 function! indexed_search#show_index(force)
+    call s:echo_index(a:force)
+endfunction
+
+function! indexed_search#delay_index(force)
     if exists('s:save_ut') | return | endif
     let s:save_ut = &ut
 
